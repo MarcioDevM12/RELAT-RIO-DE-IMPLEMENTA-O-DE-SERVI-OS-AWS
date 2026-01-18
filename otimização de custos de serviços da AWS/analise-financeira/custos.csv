@@ -1,0 +1,6 @@
+Categoria,Antes,Depois,Economia
+EC2,12500,8200,34%
+S3,8500,2500,71%
+RDS,4000,3200,20%
+Outros,2000,1600,20%
+Total,27000,15500,43%

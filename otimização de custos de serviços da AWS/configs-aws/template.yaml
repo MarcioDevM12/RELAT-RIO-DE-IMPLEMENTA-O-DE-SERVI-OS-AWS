@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS Cost Optimization Stack
+
+Resources:
+  CostOptimizationBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "abstergo-cost-data-${AWS::AccountId}"
+      VersioningConfiguration:
+        Status: Enabled
+
+  CostReportLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: cost-report-generator
+      Runtime: python3.9
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          import json
+          def handler(event, context):
+              return {"statusCode": 200, "body": "Cost report generated"}
