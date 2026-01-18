@@ -1,4 +1,3 @@
-# otimização de custos de serviços da AWS
 # RELATÓRIO DE IMPLEMENTAÇÃO DE SERVIÇOS AWS
 
 **Data:** 18/01/2026  
